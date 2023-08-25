@@ -1,6 +1,19 @@
-# GptTest
+# Angular GPT Interface
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+A quick and dirty chatGPT style interface built to integrate into an API I built using my new library found here: 
+
+[Laravel Open AI Conversations](https://github.com/l4nos/laravel-open-ai-conversations)
+
+## Uses:
+
+- Tailwind
+- Highlight.js
+- Angular Clipboard
+
+&nbsp;
+> ### Disclaimer
+> This isn't finished or polished, plenty of stuff to do to it such as responsive and proper loading states. I built this for my own personal use, but you are welcome to use it as a convenient starting point to any project.
+
 
 ## Development server
 
