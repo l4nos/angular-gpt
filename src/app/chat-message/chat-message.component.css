@@ -19,3 +19,16 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+.d-flex{
+  display: flex;
+}
+
+.token-count{
+  margin-left: auto;
+  background-color: rgba(0,0,0,0.2);
+  padding: 10px 20px;
+  border-radius: 12px;
+  zoom:0.8;
+  font-weight: 600;
+}
