@@ -42,8 +42,6 @@ export class ChatMessageComponent implements OnInit, AfterViewInit {
   }
 
 
-
-
   private highlightCode() {
     this.el.nativeElement.querySelectorAll('pre code').forEach((block: HTMLElement) => {
       hljs.highlightBlock(block);

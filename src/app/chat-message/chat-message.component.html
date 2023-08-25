@@ -9,7 +9,10 @@
   <div [innerHTML]="parsedMessage"></div>
 </div>
 <div class="d-flex">
-  <div class="token-count">
-    Tokens Used: {{message.actual_token_length}}
+  <div class="token-count" *ngIf="!message.is_from_user">
+    Tokens: {{message.actual_token_length}}
+  </div>
+  <div class="token-count" *ngIf="message.is_from_user">
+    Tokens: {{message.estimated_token_length}}
   </div>
 </div>
