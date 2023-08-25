@@ -8,8 +8,11 @@
 
     <!-- Input Container -->
     <div class="input-container flex space-x-4 mt-4">
-      <textarea [(ngModel)]="currentQuestion" placeholder="Ask your question..." class="flex-grow p-4 w-full rounded-md border border-gray-700 bg-gray-700 text-white focus:ring-2 focus:ring-blue-600 focus:bg-gray-600 focus:border-transparent"></textarea>
-      <button (click)="submitQuestion()" class="bg-blue-950 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition duration-200">Send</button>
+      <textarea [disabled]="isWaitingForResponse" [(ngModel)]="currentQuestion" placeholder="Ask your question..." class="flex-grow p-4 w-full rounded-md border border-gray-700 bg-gray-700 text-white focus:ring-2 focus:ring-blue-600 focus:bg-gray-600 focus:border-transparent"></textarea>
+      <button [disabled]="isWaitingForResponse" (click)="submitQuestion()" class="bg-blue-950 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition duration-200">
+        <ng-container *ngIf="!isWaitingForResponse">Send</ng-container>
+        <ng-container *ngIf="isWaitingForResponse"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_P7sC{transform-origin:center;animation:spinner_svv2 .75s infinite linear}@keyframes spinner_svv2{100%{transform:rotate(360deg)}}</style><path fill="white" d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z" class="spinner_P7sC"/></svg></ng-container>
+      </button>
     </div>
 
   </div>

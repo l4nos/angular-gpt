@@ -1,9 +1,19 @@
 <nav class="conversation-list-container">
-  <ng-container *ngFor="let conversation of conversations">
-    <p class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
-      <a [routerLink]="['/', conversation.id]" routerLinkActive="active-conversation">{{ conversation.id }}</a>
-    </p>
+  <ng-container *ngFor="let conversation of conversations; let i = index;">
+    <a
+      [routerLink]="['/', conversation.id]"
+      routerLinkActive="active-conversation"
+      class="block py-2.5 px-4 rounded transition duration-200 bg-blue-950 text-white hover:bg-gray-700">
+      <p class="m-0">Conversation #{{i}}</p>
+      <p><strong>{{conversation.model}}</strong></p>
+      <p><strong>Max Tokens: {{conversation.token_limit}}</strong></p>
+    </a>
   </ng-container>
 
-  <button (click)="addConversation()">Add Conversation</button>
+  <button
+    class="w-full bg-blue-950 text-white py-2 px-4 rounded mt-4 transition duration-200 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+    (click)="addConversation()"
+  >
+    Add Conversation
+  </button>
 </nav>
