@@ -1,0 +1,10 @@
+<div
+  [class.bg-blue-950]="message.is_from_user == 1"
+  [class.text-white]="message.is_from_user == 1"
+  [class.bg-gray-700]="message.is_from_user == 0"
+  [class.text-white]="message.is_from_user == 0"
+  class="chat-message mb-4 mb-2 inline-block rounded-lg"
+  (click)="copyCode($event)">
+
+  <div [innerHTML]="parsedMessage"></div>
+</div>

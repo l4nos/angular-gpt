@@ -1,0 +1,9 @@
+<nav class="conversation-list-container">
+  <ng-container *ngFor="let conversation of conversations">
+    <p class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white">
+      <a [routerLink]="['/', conversation.id]" routerLinkActive="active-conversation">{{ conversation.id }}</a>
+    </p>
+  </ng-container>
+
+  <button (click)="addConversation()">Add Conversation</button>
+</nav>

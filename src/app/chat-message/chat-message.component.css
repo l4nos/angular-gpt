@@ -1,0 +1,21 @@
+.chat-message {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+
+
+.chat-message {
+  display: block;
+  width: 100%;
+}
+
+.chat-message *{
+  font-size:1rem;
+}
+
+.chat-message pre {
+  background-color: #222222 !important;
+  padding: 10px;
+  border-radius: 5px;
+}
